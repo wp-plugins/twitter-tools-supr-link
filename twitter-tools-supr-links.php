@@ -148,7 +148,7 @@ class TwitterToolsSuprLinks {
 			exit();
 
 		// Ask su.pr for details about a random shortened URL in order to test the authentication details
-		$response = wp_remote_retrieve_body( wp_remote_get( "http://su.pr/api/expand?shortUrl=http://su.pr/mnvj7&login={$login}&apiKey={$apikey}" ) );
+		$response = wp_remote_retrieve_body( wp_remote_get( "http://su.pr/api/expand?shortUrl=http://su.pr/2l5JSm&login={$login}&apiKey={$apikey}" ) );
 
 		if ( empty($response) )
 			exit( '<strong style="color:red">' . __('Failed to test credentials. Hmm.', 'twitter-tools-supr-links') . '</strong>' );
