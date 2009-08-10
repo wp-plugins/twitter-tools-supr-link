@@ -116,7 +116,7 @@ class TwitterToolsSuprLinks {
 			<th scope="row"><label for="viper_ttbl_apikey"><?php _e( 'su.pr API Key', 'twitter-tools-supr-links' ); ?></label></th>
 			<td>
 				<input type="text" name="viper_ttbl_apikey" id="viper_ttbl_apikey" value="<?php form_option('viper_ttbl_apikey'); ?>" class="regular-text" />
-				<span class="description"><?php printf( __( 'This can be found on your <a href="%s">account page</a>.', 'twitter-tools-supr-links' ), 'http://su.pr/account/' ); ?></span>
+				<span class="description"><?php printf( __( 'This can be found on your <a href="%s">account page</a>.', 'twitter-tools-supr-links' ), 'http://su.pr/settings/' ); ?></span>
 			</td>
 		</tr>
 		<tr valign="top" class="hide-if-no-js">
