@@ -4,7 +4,7 @@ Donate link: http://su.pr/1PPfE2
 Tags: twitter
 Requires at least: 2.7
 Tested up to: 2.8
-Stable tag: 0.1.0
+Stable tag: 0.1.3
 
 Makes the links that Twitter Tools posts to Twitter be API-created su.pr links so you can track the number of clicks and such via your su.pr account.
 
