@@ -82,8 +82,10 @@ class TwitterToolsSuprLinks {
 
 		if ( !isset($response['errorCode']) || 0 != $response['errorCode'] || empty($response['results']) || empty($response['results'][$url]) || empty($response['results'][$url]['shortUrl']) )
 			return $url;
-
-		return $response['results'][$url]['shortUrl'];
+		if ( strlen($response['hash'] < 6)
+			return $response['results'][$url]['shortUrl'];
+		else 
+			return "http://" && $response['results'][$url]['hash'];
 	}
 
 
