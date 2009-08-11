@@ -4,7 +4,7 @@
 
 Plugin Name:  Twitter Tools: su.pr Links
 Plugin URI:   http://www.jonrogers.co.uk/su-pr-for-wordpress-twitter-tools/
-Version:      0.1.0
+Version:      0.1.3
 Description:  Makes the links that <a href="http://wordpress.org/extend/plugins/twitter-tools/">Twitter Tools</a> posts to Twitter be API-created <a href="http://su.pr/">su.pr</a> links so you can track the number of clicks and such via your su.pr account. Requires PHP 5.2.0+. 
 Author:       Jon Rogers
 Author URI:   http://www.jonrogers.co.uk/
@@ -82,10 +82,15 @@ class TwitterToolsSuprLinks {
 
 		if ( !isset($response['errorCode']) || 0 != $response['errorCode'] || empty($response['results']) || empty($response['results'][$url]) || empty($response['results'][$url]['shortUrl']) )
 			return $url;
-		if ( strlen($response['hash'] < 6)
+
+		if (strlen($response['results'][$url]['hash']) > 6)
+			{
+
+			return "http://".$response['results'][$url]['hash'];
+			}
+		else
 			return $response['results'][$url]['shortUrl'];
-		else 
-			return "http://" && $response['results'][$url]['hash'];
+		
 	}
 
 
